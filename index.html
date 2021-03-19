@@ -9,21 +9,28 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <div class="header blackBackground whiteLetter">
-            <h1>Generador de Memes</h1>
-            <div class="botones">
-                <button class="imagen blackBackground whiteLetter"><i class="fa fa-file-image-o" aria-hidden="true"></i>  Imagen</button>
-                <button class="texto blackBackground whiteLetter"><i class="fa fa-font" aria-hidden="true"></i>  Texto</button>
-                <button class="modo blackBackground whiteLetter"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>  Modo claro</button>
+    <div class="main">
+        <header>
+            <div class="header blackBackground whiteLetter">
+                <h1>Generador de Memes</h1>
+                <div class="buttons">
+                    <button class="image blackBackground whiteLetter"><i class="fa fa-file-image-o" aria-hidden="true"></i>  Imagen</button>
+                    <button class="text blackBackground whiteLetter"><i class="fa fa-font" aria-hidden="true"></i>  Texto</button>
+                    <button class="darkOrLight blackBackground whiteLetter"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>  Modo claro</button>
+                </div>
             </div>
-        </div>
-    </header>
-    <div class="container">
-        <div class="meme whiteBackground">
-
-        </div>
+        </header>
+        <section class="container">
+            <div class="meme">
+                <div class="topText textMeme whiteBackground blackLetter">TOP TEXT</div>
+                <div class="imgMeme blackBackground"></div>
+                <div class="bottomText textMeme whiteBackground blackLetter">BOTTOM TEXT</div>
+            </div>
+            <button class="download whiteLetter"><i class="fa fa-download" aria-hidden="true"></i>  Descargar meme</button>
+        </section>
     </div>
+    <div class="imageEdit"></div>
+    <div class="textEdit"></div>
     
     <script src="/app.js"></script>
 </body>

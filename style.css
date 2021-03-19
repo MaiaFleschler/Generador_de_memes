@@ -6,6 +6,7 @@
 }
 body{
     background-color: rgb(83, 72, 82);
+    display: flex;
 }
 .whiteLetter{
     color: white;
@@ -19,27 +20,34 @@ body{
 .blackBackground{
     background-color: black;
 }
+.main{
+    
+    width: 100%;
+}
 .header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 0.5rem;
+    padding-top: 0.9rem;
     padding-bottom: 1rem;
 }
 .header h1{
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
 }
-.imagen{
+.image{
     border: none;
+    font-size: 0.9rem;
 }
-.texto{
+.text{
     border: none;
     margin-left: 0.8rem;
     margin-right: 0.8rem;
+    font-size: 0.9rem;
 }
-.modo{
+.darkOrLight{
     border: none;
+    font-size: 0.9rem;
 }
 .container{
     display: flex;
@@ -47,7 +55,36 @@ body{
     align-items: center;
 }
 .meme{
+    display: flex;
+    flex-direction: column;
     width: 90%;
-    height: 330px;
-    margin-top: 5rem;
+    margin-top: 5.4rem;
+}
+.textMeme{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+} 
+.imgMeme{
+    width: 100%;
+    height: 290px;
+}
+.download{
+    background-color: rgb(66, 129, 66);
+    margin-top: 2rem;
+    border: none;
+    border-radius: 5%;
+    padding: 0.9rem;
+    font-size: 0.9rem;
+}
+.imageEdit{
+    display: none;
+    width: 100%;
+}
+.textEdit{
+    display: none;
+    width: 100%;
 }
