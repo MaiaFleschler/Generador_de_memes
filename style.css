@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
-    box-sizing: border-box;
+    box-sizing:content-box;
     font-family: 'Roboto', sans-serif;
 }
 body{
-    background-color: rgb(83, 72, 82);
     display: flex;
 }
 .whiteLetter{
@@ -20,8 +19,14 @@ body{
 .blackBackground{
     background-color: black;
 }
+.darkBackground{
+    background-color: rgb(83, 72, 82);
+}
+.darkInput{
+    background-color: rgb(151, 133, 150);
+}
 .main{
-    
+    display: none;
     width: 100%;
 }
 .header{
@@ -76,15 +81,124 @@ body{
     background-color: rgb(66, 129, 66);
     margin-top: 2rem;
     border: none;
-    border-radius: 5%;
+    border-radius: 3px;
     padding: 0.9rem;
     font-size: 0.9rem;
 }
 .imageEdit{
-    display: none;
     width: 100%;
+    /* background-color: yellow; */
+}
+.close{
+    font-size: 1rem;
+    text-align: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+.containerImageEdit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerImageEdit h1{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.url{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+#url{
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.4rem;
+    margin-bottom: 1.4rem;
+}
+.background{
+    display: flex;
+    width: 92%;
+    justify-content: center;
+    justify-content: space-between;
+}
+.backgroundColor{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 48%;
+}
+.backgroundColorContainer{
+    display: flex;
+    width: 100%;
+    height: 2.1rem;
+    margin-top: 0.4rem;
+    border-radius: 3px;
+    align-items: center;
+}
+#backgroundColor{
+   border: none;
+}
+.backgroundColorNumber{
+    width: 80%;
+    height: 2.1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-top: 0.8rem;
+}
+#backgroundOptions{
+    border: none;
+    border-radius: 3px;
+    width: 48%;
+    height: 2.1rem;
+    margin-top: 1.3rem;
+}
+.filters{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin-top: 2rem;
+    margin-left: 4%;
+    font-size: 0.8rem;
+}
+.filters h3{
+    font-size: 0.8rem;
+}
+.filters label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.1rem;
+}
+.filters input{
+    -webkit-appearance: none; 
+    outline: none;
+    height: 0.4rem;
+    margin-top: 0.6rem;
+    border-radius: 3px;
+}
+.filters input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10px;
+    background: white;
+}
+.resetFilters{
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+    width: 9rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem;
 }
 .textEdit{
     display: none;
     width: 100%;
+    background-color: pink;
 }

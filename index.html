@@ -8,8 +8,8 @@
     <title>Generador de memes</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-    <div class="main">
+<body class="darkBackground">
+    <div class="main darkBackground">
         <header>
             <div class="header blackBackground whiteLetter">
                 <h1>Generador de Memes</h1>
@@ -29,7 +29,67 @@
             <button class="download whiteLetter"><i class="fa fa-download" aria-hidden="true"></i>  Descargar meme</button>
         </section>
     </div>
-    <div class="imageEdit"></div>
+    <div class="imageEdit darkBackground">
+        <div class="close">
+            <i class="fa fa-times whiteLetter" aria-hidden="true"></i>
+        </div>
+        <div class="containerImageEdit">
+            <h1 class="whiteLetter">IMAGEN</h1>
+            <label for="url" class="url whiteLetter"> URL
+                <input type="text" id="url" class="darkInput whiteLetter" aria-label="Url">
+            </label>
+            <div class="background">
+                
+                <label for="backgroundColor" class="backgroundColor whiteLetter"> FONDO
+                    <div class="backgroundColorContainer darkInput whiteLetter">
+                        <input type="color" id="backgroundColor" class="darkInput whiteLetter" aria-label="Color de fondo" value="#FFFFFF">
+                        <p class="backgroundColorNumber">#FFFFFF</p>
+                    </div>
+                </label>
+                    
+               
+                <select id="backgroundOptions" class="darkInput whiteLetter">
+                    <option value="unset">Ninguno</option>
+                    <option value="lighten">Aclarar</option>
+                    <option value="darken">Oscurecer</option>
+                    <option value="difference">Diferencia</option>
+                    <option value="luminosity">Luminosidad</option>
+                    <option value="multiply">Multiplicar</option>
+                </select>
+            </div>
+        </div>
+        <div class="filters whiteLetter">
+            <h3>FILTROS</h3>
+            <label for="brightness">BRILLO
+                <input type="range" min="0" max="1" value="1" step="0.1" id="brightness" class="darkInput">
+            </label>
+            <label for="opacity">OPACIDAD
+                <input type="range" min="0" max="1" value="1" step="0.1" id="opacity" class="darkInput">
+            </label>
+            <label for="contrast">CONTRASTE
+                <input type="range" min="0" max="1" value="0" step="0.1" id="contrast" class="darkInput">
+            </label>
+            <label for="blur">DESENFOQUE
+                <input type="range" min="0" max="1" value="0" step="0.1" id="blur" class="darkInput">
+            </label>
+            <label for="grayscale">ESCALA DE GRISES
+                <input type="range" min="0" max="1" value="0" step="0.1" id="grayscale" class="darkInput">
+            </label>
+            <label for="sepia">SEPIA
+                <input type="range" min="0" max="1" value="0" step="0.1" id="sepia" class="darkInput">
+            </label>
+            <label for="hue">HUE
+                <input type="range" min="0" max="1" value="0" step="0.1" id="hue" class="darkInput">
+            </label>
+            <label for="saturation">SATURADO
+                <input type="range" min="0" max="1" value="0" step="0.1" id="saturation" class="darkInput">
+            </label>
+            <label for="negative">NEGATIVO
+                <input type="range" min="0" max="1" value="0" step="0.1" id="negative" class="darkInput">
+            </label>
+            <button class="resetFilters darkInput whiteLetter">Reestablecer filtros</button>
+        </div>
+    </div>
     <div class="textEdit"></div>
     
     <script src="/app.js"></script>
