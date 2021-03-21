@@ -33,15 +33,15 @@
         <div class="close">
             <i class="fa fa-times whiteLetter" aria-hidden="true"></i>
         </div>
-        <div class="containerImageEdit">
+        <div class="containerEdit">
             <h1 class="whiteLetter">IMAGEN</h1>
             <label for="url" class="url whiteLetter"> URL
                 <input type="text" id="url" class="darkInput whiteLetter" aria-label="Url">
             </label>
-            <div class="background">
+            <div class="color">
                 
                 <label for="backgroundColor" class="backgroundColor whiteLetter"> FONDO
-                    <div class="backgroundColorContainer darkInput whiteLetter">
+                    <div class="colorContainer darkInput whiteLetter">
                         <input type="color" id="backgroundColor" class="darkInput whiteLetter" aria-label="Color de fondo" value="#FFFFFF">
                         <p class="backgroundColorNumber">#FFFFFF</p>
                     </div>
@@ -56,6 +56,7 @@
                     <option value="luminosity">Luminosidad</option>
                     <option value="multiply">Multiplicar</option>
                 </select>
+            
             </div>
         </div>
         <div class="filters whiteLetter">
@@ -90,7 +91,90 @@
             <button class="resetFilters darkInput whiteLetter">Reestablecer filtros</button>
         </div>
     </div>
-    <div class="textEdit"></div>
+    <div class="textEdit">
+        <div class="close">
+            <i class="fa fa-times whiteLetter" aria-hidden="true"></i>
+        </div>
+        <div class="containerEdit">
+            <h1 class="whiteLetter">TEXTO</h1>
+            <label for="topTextEdit" class="topTextEdit whiteLetter"> SUPERIOR
+                <input type="text" id="topTextEdit" class="darkInput whiteLetter" aria-label="Texto superior" value="TOP TEXT">
+            </label>
+            <div class="checkbox whiteLetter">
+                <input type="checkbox" id="topTextCheckbox">
+                <label for="topTextCheckbox">Sin texto superior</label>
+            </div>
+            <label for="bottomTextEdit" class="bottomTextEdit whiteLetter"> INFERIOR
+                <input type="text" id="bottomTextEdit" class="darkInput whiteLetter" aria-label="Texto inferior" value="BOTTOM TEXT">
+            </label>
+            <div class="checkbox whiteLetter">
+                <input type="checkbox" id="bottomTextCheckbox">
+                <label for="bottomTextCheckbox">Sin texto inferior</label>
+            </div>
+            <label for="fontOptions" class="fontOptions whiteLetter"> FUENTE
+                <select id="fontOptions" class="darkInput whiteLetter">
+                    <option value="arial">Arial</option>
+                    <option value="arialBlack">Arial Black</option>
+                    <option value="americanTypewriter">American Typewriter</option>
+                    <option value="andaleMono">Andale Mono</option>
+                    <option value="arial">Comic Sans MS</option>
+                    <option value="helvetica">Helvetica</option>
+                    <option value="impact">Impact</option>
+                    <option value="verdana">Verdana</option>
+                    <option value="timesNewRoman">Times New Roman</option>
+                </select>
+            </label>
+            <div class="containerTextEdit">
+                <input type="number" id="fontSize" class="darkInput whiteLetter" aria-label="Tamaño de texto" value=21>
+                <button class="align darkInput whiteLetter"><i class="fa fa-align-left" aria-hidden="true"></i></button>   
+                <button class="align darkInput whiteLetter"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+                <button class="align darkInput whiteLetter"><i class="fa fa-align-right" aria-hidden="true"></i></button>             
+            </div>
+
+            <div class="color">
+                
+                <label for="textColor" class="textColor whiteLetter"> COLOR
+                    <div class="colorContainer darkInput whiteLetter">
+                        <input type="color" id="textColor" class="darkInput whiteLetter" aria-label="Color de texto" value="#000000">
+                        <p class="textColorNumber">#000000</p>
+                    </div>
+                </label>
+                <label for="backgroundColorText" class="backgroundColorText whiteLetter"> FONDO
+                    <div class="colorContainer darkInput whiteLetter">
+                        <input type="color" id="backgroundColorText" class="darkInput whiteLetter" aria-label="Color de fondo de texto" value="#FFFFFF">
+                        <p class="backgroundColorNumberText">#FFFFFF</p>
+                    </div>
+                </label>
+            </div>
+            <div class="checkbox whiteLetter">
+                <input type="checkbox" id="bottomTextCheckbox">
+                <label for="bottomTextCheckbox">Fondo transparente</label>
+            </div>
+            <div class="outline whiteLetter">
+                <h4>CONTORNO</h4>
+                <div class="buttonsOutline">
+                    <button class="outlineButton darkInput whiteLetter">Ninguno</button>
+                    <button class="outlineButton darkInput whiteLetter">Claro</button>
+                    <button class="outlineButton darkInput whiteLetter">Oscuro</button>
+                    <div class="space"></div>
+                </div>
+            </div>
+
+            <label for="spacing" class="spacing whiteLetter"> ESPACIADO
+                <input type="number" id="spacing" class="darkInput whiteLetter" aria-label="Texto espaciado" value=8>
+            </label>
+            <label for="lineSpacing" class="lineSpacing whiteLetter"> INTERLINEADO
+                <select id="lineSpacing" class="darkInput whiteLetter" aria-label="Texto interlineado" value="1.2">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </label>
+        </div>
+    </div>
     
     <script src="/app.js"></script>
 </body>

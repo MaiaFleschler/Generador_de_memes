@@ -26,8 +26,9 @@ body{
     background-color: rgb(151, 133, 150);
 }
 .main{
-    display: none;
+    /* display: none; */
     width: 100%;
+    height: 100%;
 }
 .header{
     display: flex;
@@ -87,20 +88,23 @@ body{
 }
 .imageEdit{
     width: 100%;
-    /* background-color: yellow; */
+    height: 100%;
+    display: none;
 }
 .close{
     font-size: 1rem;
-    text-align: right;
-    margin-top: 1rem;
-    margin-right: 1rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
 }
-.containerImageEdit{
+.containerEdit{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
 }
-.containerImageEdit h1{
+.containerEdit h1{
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -115,25 +119,24 @@ body{
     border: none;
     border-radius: 3px;
     font-size: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0.8rem;
     margin-top: 0.4rem;
     margin-bottom: 1.4rem;
 }
-.background{
+.color{
     display: flex;
     width: 92%;
     justify-content: center;
     justify-content: space-between;
 }
-.backgroundColor{
+.backgroundColor, .textColor, .backgroundColorText{
     display: flex;
     flex-direction: column;
     font-size: 0.8rem;
     font-weight: bold;
     width: 48%;
 }
-.backgroundColorContainer{
+.colorContainer{
     display: flex;
     width: 100%;
     height: 2.1rem;
@@ -141,10 +144,10 @@ body{
     border-radius: 3px;
     align-items: center;
 }
-#backgroundColor{
+#backgroundColor, #textColor, #backgroundColorText{
    border: none;
 }
-.backgroundColorNumber{
+.backgroundColorNumber, .textColorNumber, .backgroundColorNumberText{
     width: 80%;
     height: 2.1rem;
     font-size: 1rem;
@@ -154,15 +157,15 @@ body{
 #backgroundOptions{
     border: none;
     border-radius: 3px;
-    width: 48%;
-    height: 2.1rem;
+    width: 47%;
+    height: 2.15rem;
     margin-top: 1.3rem;
+    padding-left: 0.8rem;
 }
 .filters{
     display: flex;
     flex-direction: column;
     width: 92%;
-    margin-top: 2rem;
     margin-left: 4%;
     font-size: 0.8rem;
 }
@@ -200,5 +203,72 @@ body{
 .textEdit{
     display: none;
     width: 100%;
-    background-color: pink;
+    height: 100%;
+}
+.containerTextEdit{
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    margin-top: 0.3rem;
+}
+.topTextEdit, .bottomTextEdit, .fontOptions, .lineSpacing, .spacing, .outline{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+#topTextEdit, #bottomTextEdit, #fontOptions, #lineSpacing, #spacing{
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+    margin-top: 0.8rem;
+}
+#fontSize{
+    width: 45%;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 1.4rem;
+}
+.align{
+    width: 12%;
+    height: 2.05rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+.outline h4{
+    margin-bottom: 0.8rem;
+}
+.buttonsOutline{
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+.outlineButton{
+    width: auto;
+    height: 2.1rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+.space{
+    width: 42%;
+}
+.lineSpacing, .spacing{
+    margin-top: 0.8rem;
+}
+.checkbox{
+    display: flex;
+    width: 92%;
+    margin-bottom: 1.3rem;
+    margin-top: 0.6rem;
+}
+.checkbox label{
+    font-size: 0.8rem;
+    padding-left: 0.4rem;
 }
