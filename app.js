@@ -9,23 +9,23 @@ const imageEdit = document.querySelector(".imageEdit");
 const textEdit = document.querySelector(".textEdit");
 
 const abrirPanelImagen = () => {
-    imageEdit.style =`display:block;`;
-    main.style =`display:none;`;
-    textEdit.style =`display:none;`;
+    imageEdit.classList.remove("displayNone");
+    main.classList.add("displayNone");
+    textEdit.classList.add("displayNone");
 }
 image.addEventListener("click", abrirPanelImagen);
 
 const abrirPanelTexto = () => {
-    textEdit.style =`display:block;`;
-    main.style =`display:none;`;
-    imageEdit.style =`display:none;`;
+    textEdit.classList.remove("displayNone");
+    main.classList.add("displayNone");
+    imageEdit.classList.add("displayNone");
 }
 text.addEventListener("click", abrirPanelTexto);
 
 const cerrarPanel = () => {
-    imageEdit.style =`display:none;`;
-    main.style =`display:block;`;
-    textEdit.style =`display:none;`;
+    textEdit.classList.add("displayNone");
+    main.classList.remove("displayNone");
+    imageEdit.classList.add("displayNone");
 }
 closeImg.addEventListener("click", cerrarPanel);
 closeText.addEventListener("click", cerrarPanel);
