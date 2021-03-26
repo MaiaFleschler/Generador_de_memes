@@ -1,13 +1,15 @@
-// Abrir y cerrar paneles
+
 
 const main = document.querySelector(".main");
 const image = document.querySelector(".image");
 const text = document.querySelector(".text");
+const darkOrLight = document.querySelector(".darkOrLight");
 const closeImg = document.querySelector("#closeImg");
 const closeText = document.querySelector("#closeText");
 const imageEdit = document.querySelector(".imageEdit");
 const textEdit = document.querySelector(".textEdit");
 
+// Abrir y cerrar paneles
 const abrirPanelImagen = () => {
     imageEdit.classList.remove("displayNone");
     main.classList.add("displayNone");
@@ -29,3 +31,6 @@ const cerrarPanel = () => {
 }
 closeImg.addEventListener("click", cerrarPanel);
 closeText.addEventListener("click", cerrarPanel);
+
+
+
