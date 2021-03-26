@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Generador de memes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
 </head>
 <body>
     <div class="main">
@@ -16,7 +17,10 @@
                 <div class="buttons">
                     <button class="image"><i class="fa fa-file-image-o" aria-hidden="true"></i>  Imagen</button>
                     <button class="text"><i class="fa fa-font" aria-hidden="true"></i>  Texto</button>
-                    <button class="darkOrLight"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>  Modo claro</button>
+                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    <label class="darkOrLight" for="toggle">Modo oscuro</label>
+                    <input type="checkbox" id="toggle" class="visually-hidden">
+                    
                 </div>
             </div>
         </header>

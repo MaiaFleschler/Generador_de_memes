@@ -32,5 +32,29 @@ const cerrarPanel = () => {
 closeImg.addEventListener("click", cerrarPanel);
 closeText.addEventListener("click", cerrarPanel);
 
+// Modo oscuro
+
+const toggleSwitch = document.querySelector("#toggle");
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggleSwitch.checked = true;
+        darkOrLight.innerHTML = "Modo claro";
+    } else {
+        localStorage.setItem('theme', 'light');
+        document.documentElement.setAttribute('data-theme', 'light');
+        toggleSwitch.checked = false;
+        darkOrLight.innerHTML = "Modo oscuro";
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+if (document.documentElement.getAttribute("data-theme") == "dark"){
+    toggleSwitch.checked = true;
+}
+
 
 
