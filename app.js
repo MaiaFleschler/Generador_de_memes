@@ -1,15 +1,16 @@
 
 
 const main = document.querySelector(".main");
-const image = document.querySelector(".image");
-const text = document.querySelector(".text");
-const darkOrLight = document.querySelector(".darkOrLight");
+const image = document.querySelector("#image");
+const text = document.querySelector("#text");
+const switchThemeButton = document.querySelector("#switchTheme");
 const closeImg = document.querySelector("#closeImg");
 const closeText = document.querySelector("#closeText");
 const imageEdit = document.querySelector(".imageEdit");
 const textEdit = document.querySelector(".textEdit");
 
 // Abrir y cerrar paneles
+
 const abrirPanelImagen = () => {
     imageEdit.classList.remove("displayNone");
     main.classList.add("displayNone");
@@ -34,27 +35,18 @@ closeText.addEventListener("click", cerrarPanel);
 
 // Modo oscuro
 
-const toggleSwitch = document.querySelector("#toggle");
-
 function switchTheme(e) {
-    if (e.target.checked) {
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-        toggleSwitch.checked = true;
-        darkOrLight.innerHTML = "Modo claro";
-    } else {
-        localStorage.setItem('theme', 'light');
-        document.documentElement.setAttribute('data-theme', 'light');
-        toggleSwitch.checked = false;
-        darkOrLight.innerHTML = "Modo oscuro";
-    }    
-}
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    let targetTheme = "light";
+    switchThemeButton.innerHTML = `<i class="fa fa-lightbulb-o" aria-hidden="true"></i> Modo oscuro`;
 
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-if (document.documentElement.getAttribute("data-theme") == "dark"){
-    toggleSwitch.checked = true;
-}
+    if(currentTheme ==  "light" ||  currentTheme == undefined){
+        targetTheme = "dark"
+        switchThemeButton.innerHTML = `<i class="fa fa-lightbulb-o" aria-hidden="true"></i> Modo claro`;
+    }
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    }
+    switchThemeButton.addEventListener('click', switchTheme);
 
 
 
