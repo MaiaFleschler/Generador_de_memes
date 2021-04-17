@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
-    box-sizing:content-box;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 :root {
@@ -15,6 +15,13 @@
 }
 body{
     display: flex; 
+    position: relative;
+    background-color: var(--background-color-main);
+    height: 100vh;
+}
+.zIndex1{
+    z-index:1;
+    position: absolute;
 }
 .displayNone{
     display: none;
@@ -22,10 +29,10 @@ body{
 .main{
     width: 100%;
     height: 100%;
-    padding-bottom: 2rem;
     background-color: var(--background-color-main);
+    position: relative;
 }
-.header{
+header{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,35 +53,42 @@ body{
 .header h1{
     font-size: 1.8rem;
     margin-bottom: 1.2rem;
+    width: fit-content;
+}
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-between;
 }
 .button{
     border: none;
-    margin-left: 0.8rem;
-    margin-right: 0.8rem;
     font-size: 0.9rem;
     outline: none;
     background-color: var(--background-color-header);
     color: var(--color);
     cursor: pointer;
 }
-#toggle{
-    opacity: 0;
-}
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+
 }
 .meme{
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 90%;
-    margin-top: 5.4rem;
+    height: 50vh;
 }
 .textMeme{
     width: 100%;
+    height: fit-content;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: bold;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -82,12 +96,11 @@ body{
 } 
 .imgMeme{
     width: 100%;
-    height: 290px;
+    height: 70%;
     background-color: black;
 }
 .download{
     background-color: rgb(66, 129, 66);
-    margin-top: 2rem;
     border: none;
     border-radius: 3px;
     padding: 0.9rem;
@@ -97,9 +110,10 @@ body{
 }
 .imageEdit{
     width: 100%;
-    height: 100%;
     background-color: var(--background-color-panel);
     color: var(--color);
+    position: absolute;
+    right: 0;
 }
 .close{
     font-size: 1rem;
@@ -224,15 +238,17 @@ body{
 }
 .textEdit{
     width: 100%;
-    height: 100%;
     background-color: var(--background-color-panel);
     color: var(--color);
+    position: absolute;
+    right: 0;
 }
 .containerTextEdit{
     display: flex;
     width: 92%;
     justify-content: space-between;
     margin-top: 0.3rem;
+    margin-bottom: 1.4rem;
 }
 .topTextEdit, .bottomTextEdit, .fontOptions, .lineSpacing, .spacing, .outline{
     display: flex;
@@ -257,20 +273,21 @@ body{
     border-radius: 3px;
     font-size: 1rem;
     padding: 0.5rem 0.8rem;
-    margin-bottom: 1.4rem;
+    
     outline: none;
     background-color: var(--input-color);
     color: var(--color);
 }
 .align{
-    width: 11%;
-    height: 2.05rem;
+    width: 14%;
     border: none;
     border-radius: 3px;
-    font-size: 1rem;
     outline: none;
     background-color: var(--input-color);
     color: var(--color);
+}
+.alignIcon{
+    font-size: 0.9rem;
 }
 .outline h4{
     margin-bottom: 0.8rem;
@@ -282,8 +299,6 @@ body{
     margin-bottom: 0.8rem;
 }
 .outlineButton{
-    width: 20%;
-    height: 2.1rem;
     border: none;
     border-radius: 3px;
     font-size: 1rem;
@@ -291,6 +306,7 @@ body{
     outline: none;
     background-color: var(--input-color);
     color: var(--color);
+    padding: 0.5rem;
 }
 .space{
     width: 42%;
@@ -307,6 +323,59 @@ body{
 .checkbox label{
     font-size: 0.8rem;
     padding-left: 0.4rem;
+}
+@media (min-width: 525px){
+    .meme{
+        height: 60vh;
+    }
+    .imgMeme{
+        height: 80%;
+    }
+    .imageEdit{
+        width: 16rem;
+        z-index: 1;
+        height: 100vh;
+    }
+    .download{
+        margin-top: 1rem;
+    }
+    .textEdit{
+        width: 16rem;
+        height: 100vh;
+    }
+    
+}
+@media (min-width: 700px){
+    .meme{
+        width: 38rem; 
+    }
+}
+@media (min-width: 965px){
+    .close{
+        display: none;
+    }
+    .container{
+        margin-top: 2vh;
+    }
+    .meme{
+        width: 28rem;
+        height: 70vh;
+    }
+    .imgMeme{
+        height: 90%;
+    }
+    .imageEdit{
+        z-index: 1;
+        display: block;
+        height:100%;
+        overflow:scroll;
+        overflow-x:hidden;
+    }
+    .textEdit{
+        height:100%;
+        overflow:scroll;
+        overflow-x:hidden;
+    }
 }
 
 

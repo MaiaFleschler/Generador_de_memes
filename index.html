@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="main">
+    <div class="main zIndex1">
         <header>
             <div class="header">
                 <h1>Generador de Memes</h1>
@@ -24,14 +24,14 @@
         </header>
         <section class="container">
             <div class="meme">
-                <div class="topText textMeme">TOP TEXT</div>
+                <p class="topText textMeme">TOP TEXT</p>
                 <div class="imgMeme"></div>
-                <div class="bottomText textMeme">BOTTOM TEXT</div>
+                <p class="bottomText textMeme">BOTTOM TEXT</p>
             </div>
             <button class="download"><i class="fa fa-download" aria-hidden="true"></i>  Descargar meme</button>
         </section>
     </div>
-    <div class="imageEdit displayNone">
+    <aside class="imageEdit displayNone">
         <div class="close">
             <i id="closeImg" class="fa fa-times " aria-hidden="true"></i>
         </div>
@@ -92,8 +92,8 @@
             </label>
             <button class="resetFilters">Reestablecer filtros</button>
         </div>
-    </div>
-    <div class="textEdit displayNone">
+    </aside>
+    <aside class="textEdit displayNone">
         <div class="close">
             <i id="closeText" class="fa fa-times " aria-hidden="true"></i>
         </div>
@@ -128,9 +128,9 @@
             </label>
             <div class="containerTextEdit">
                 <input type="number" id="fontSize" aria-label="Tamaño de texto" value=21>
-                <button class="align"><i class="fa fa-align-left" aria-hidden="true"></i></button>   
-                <button class="align"><i class="fa fa-align-center" aria-hidden="true"></i></button>
-                <button class="align"><i class="fa fa-align-right" aria-hidden="true"></i></button>             
+                <button class="align"><i class="fa fa-align-left alignIcon" aria-hidden="true"></i></button>   
+                <button class="align"><i class="fa fa-align-center alignIcon" aria-hidden="true"></i></button>
+                <button class="align"><i class="fa fa-align-right alignIcon" aria-hidden="true"></i></button>             
             </div>
 
             <div class="color">
@@ -176,7 +176,7 @@
                 </select>
             </label>
         </div>
-    </div>
+    </aside >
     
     <script src="app.js"></script>
 </body>

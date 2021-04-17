@@ -12,26 +12,34 @@ const textEdit = document.querySelector(".textEdit");
 // Abrir y cerrar paneles
 
 const abrirPanelImagen = () => {
-    imageEdit.classList.remove("displayNone");
-    main.classList.add("displayNone");
-    textEdit.classList.add("displayNone");
+    imageEdit.classList.add("zIndex1");
+    imageEdit.classList.toggle("displayNone");
+    main.classList.remove("zIndex1");
+    textEdit.classList.toggle("displayNone");
+    textEdit.classList.remove("zIndex1");
 }
 image.addEventListener("click", abrirPanelImagen);
 
 const abrirPanelTexto = () => {
-    textEdit.classList.remove("displayNone");
-    main.classList.add("displayNone");
-    imageEdit.classList.add("displayNone");
+    textEdit.classList.add("zIndex1");
+    textEdit.classList.toggle("displayNone");
+    main.classList.remove("zIndex1");
+    imageEdit.classList.toggle("displayNone");
+    imageEdit.classList.remove("zIndex1");
 }
 text.addEventListener("click", abrirPanelTexto);
 
 const cerrarPanel = () => {
-    textEdit.classList.add("displayNone");
-    main.classList.remove("displayNone");
-    imageEdit.classList.add("displayNone");
+    main.classList.add("zIndex1");
+    textEdit.classList.remove("zIndex1");
+    imageEdit.classList.remove("zIndex1");
+    textEdit.classList.toggle("displayNone");
+    imageEdit.classList.toggle("displayNone");
 }
 closeImg.addEventListener("click", cerrarPanel);
 closeText.addEventListener("click", cerrarPanel);
+
+
 
 // Modo oscuro
 
@@ -47,6 +55,4 @@ function switchTheme(e) {
     document.documentElement.setAttribute('data-theme', targetTheme)
     }
     switchThemeButton.addEventListener('click', switchTheme);
-
-
 
