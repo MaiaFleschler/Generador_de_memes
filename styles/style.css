@@ -26,11 +26,11 @@ body{
 .displayNone{
     display: none;
 }
-.main{
+.mainPanel{
     width: 100%;
     height: 100%;
     background-color: var(--background-color-main);
-    position: relative;
+    /* position: relative; */
 }
 header{
     display: flex;
@@ -69,39 +69,52 @@ header{
     color: var(--color);
     cursor: pointer;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .container{
+    width: 40vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin-top: 10vh;
-
-}
-.meme{
-    display: flex;
-    flex-direction: column;
     position: relative;
-    width: 90%;
-    height: 50vh;
 }
-.textMeme{
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background-color: white;
-} 
-.imgMeme{
+
+#imgMeme{
     width: 100%;
     height: 100%;
-    background-color: black;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: unset;
+    background-color: rgb(0, 0, 0);
+}
+.topText{
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: white;
+    position: static;
+    top: 0;
+}
+.bottomText{
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: white;
+    position: static;
+    bottom: 0;
 }
 .download{
     background-color: rgb(66, 129, 66);
@@ -111,6 +124,7 @@ header{
     font-size: 0.9rem;
     outline: none;
     color: white;
+    margin-top: 1rem;
 }
 .imageEdit{
     width: 100%;
@@ -329,44 +343,29 @@ header{
     padding-left: 0.4rem;
 }
 @media (min-width: 525px){
-    .meme{
-        height: 60vh;
-    }
-    .imgMeme{
-        height: 80%;
-    }
     .imageEdit{
         width: 16rem;
         z-index: 1;
         height: 100vh;
     }
-    .download{
-        margin-top: 1rem;
-    }
     .textEdit{
         width: 16rem;
         height: 100vh;
+    }   
+    .container{
+        width: 50vh;
+        height: 50vh;
     }
-    
 }
 @media (min-width: 700px){
-    .meme{
-        width: 38rem; 
+    .container{
+        width: 60vh;
+        height: 60vh;
     }
 }
 @media (min-width: 965px){
     .close{
         display: none;
-    }
-    .container{
-        margin-top: 2vh;
-    }
-    .meme{
-        width: 28rem;
-        height: 70vh;
-    }
-    .imgMeme{
-        height: 80%;
     }
     .imageEdit{
         z-index: 1;

@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="main zIndex1">
+    <div class="mainPanel zIndex1">
         <header>
             <div class="header">
                 <h1>Generador de Memes</h1>
@@ -22,14 +22,14 @@
                 </div>
             </div>
         </header>
-        <section class="container">
-            <div class="meme">
-                <p class="topText textMeme">TOP TEXT</p>
-                <div class="imgMeme"></div>
-                <p class="bottomText textMeme">BOTTOM TEXT</p>
+        <main>
+            <div class="container">
+                <p class="topText">TOP TEXT</p>
+                <div id= "imgMeme"></div>
+                <p class="bottomText">BOTTOM TEXT</p>
             </div>
             <button class="download"><i class="fa fa-download" aria-hidden="true"></i>  Descargar meme</button>
-        </section>
+        </main>
     </div>
     <aside class="imageEdit displayNone">
         <div class="close">
@@ -100,14 +100,14 @@
         <div class="containerEdit ">
             <h1>TEXTO</h1>
             <label for="topTextEdit" class="topTextEdit"> SUPERIOR
-                <input type="text" id="topTextEdit" aria-label="Texto superior" value="TOP TEXT">
+                <textarea  id="topTextEdit" rows="1" aria-label="Texto superior" value="TOP TEXT">TOP TEXT</textarea>
             </label>
             <div class="checkbox">
                 <input type="checkbox" id="topTextCheckbox">
                 <label for="topTextCheckbox">Sin texto superior</label>
             </div>
             <label for="bottomTextEdit" class="bottomTextEdit"> INFERIOR
-                <input type="text" id="bottomTextEdit" aria-label="Texto inferior" value="BOTTOM TEXT">
+                <textarea  id="bottomTextEdit" rows="1" aria-label="Texto inferior" value="BOTTOM TEXT">BOTTOM TEXT</textarea>
             </label>
             <div class="checkbox">
                 <input type="checkbox" id="bottomTextCheckbox">
@@ -115,22 +115,22 @@
             </div>
             <label for="fontOptions" class="fontOptions"> FUENTE
                 <select id="fontOptions">
-                    <option value="arial">Arial</option>
-                    <option value="arialBlack">Arial Black</option>
-                    <option value="americanTypewriter">American Typewriter</option>
-                    <option value="andaleMono">Andale Mono</option>
-                    <option value="arial">Comic Sans MS</option>
-                    <option value="helvetica">Helvetica</option>
-                    <option value="impact">Impact</option>
-                    <option value="verdana">Verdana</option>
-                    <option value="timesNewRoman">Times New Roman</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Courier">Courier</option>
+                    <option value="sans-serif">Sans-serif</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="'Times New Roman'">Times New Roman</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
                 </select>
             </label>
             <div class="containerTextEdit">
-                <input type="number" id="fontSize" aria-label="Tamaño de texto" value=21>
-                <button class="align"><i class="fa fa-align-left alignIcon" aria-hidden="true"></i></button>   
-                <button class="align"><i class="fa fa-align-center alignIcon" aria-hidden="true"></i></button>
-                <button class="align"><i class="fa fa-align-right alignIcon" aria-hidden="true"></i></button>             
+                <input type="number" id="fontSize" aria-label="Tamaño de texto" value=15 min=10 max=60>
+                <button class="align alignLeft"><i class="fa fa-align-left alignIcon" aria-hidden="true"></i></button>   
+                <button class="align alignCenter"><i class="fa fa-align-center alignIcon" aria-hidden="true"></i></button>
+                <button class="align alignRight"><i class="fa fa-align-right alignIcon" aria-hidden="true"></i></button>             
             </div>
 
             <div class="color">
@@ -149,27 +149,27 @@
                 </label>
             </div>
             <div class="checkbox">
-                <input type="checkbox" id="bottomTextCheckbox">
-                <label for="bottomTextCheckbox">Fondo transparente</label>
+                <input type="checkbox" id="transparentTextCheckbox">
+                <label for="transparentTextCheckbox">Fondo transparente</label>
             </div>
             <div class="outline">
                 <h4>CONTORNO</h4>
                 <div class="buttonsOutline">
-                    <button class="outlineButton">Ninguno</button>
-                    <button class="outlineButton">Claro</button>
-                    <button class="outlineButton">Oscuro</button>
+                    <button class="outlineButton notOutline">Ninguno</button>
+                    <button class="outlineButton lightOutline">Claro</button>
+                    <button class="outlineButton darkOutline">Oscuro</button>
                     <div class="space"></div>
                 </div>
             </div>
 
             <label for="spacing" class="spacing"> ESPACIADO
-                <input type="number" id="spacing" aria-label="Texto espaciado" value=8>
+                <input type="number" id="spacing" aria-label="Texto espaciado" min=0 max=60 value=10>
             </label>
             <label for="lineSpacing" class="lineSpacing"> INTERLINEADO
                 <select id="lineSpacing" aria-label="Texto interlineado" value="1.2">
                     <option value="0.8">0.8</option>
                     <option value="1">1</option>
-                    <option value="1.2">1.2</option>
+                    <option value="1.2" selected>1.2</option>
                     <option value="1.5">1.5</option>
                     <option value="2">2</option>
                     <option value="2.5">2.5</option>
