@@ -74,6 +74,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 10vh;
 }
 .container{
     width: 40vh;
@@ -81,7 +82,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10vh;
     position: relative;
 }
 
@@ -128,6 +128,12 @@ main{
     outline: none;
     color: white;
     margin-top: 1rem;
+}
+.download:hover{
+    background-color: rgb(98, 182, 98);
+}
+.download:active{
+    border: 2px solid rgb(66, 129, 66);
 }
 .imageEdit{
     width: 100%;
