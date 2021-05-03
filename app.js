@@ -98,7 +98,7 @@ function switchTheme(e) {
 // Edicion imagen
 
 // Agrego imagen
-inputUrl.addEventListener("keyup",()=>{
+inputUrl.addEventListener("input",()=>{
     const url = inputUrl.value;
     divImg.style.backgroundImage = `url(${url})`;
 });
@@ -111,7 +111,7 @@ backgroundColor.addEventListener("input",()=>{
 });
 
 // Blend Mode
-backgroundOptions.addEventListener("input", () => {
+backgroundOptions.addEventListener("change", () => {
     divImg.style.backgroundBlendMode = backgroundOptions.value;
 });
 
@@ -165,7 +165,7 @@ bottomTextEdit.addEventListener("input", () =>{
 
 
 //  Checkbox con o sin texto
-topTextCheckbox.addEventListener("input", () =>{
+topTextCheckbox.addEventListener("change", () =>{
     if(topTextCheckbox.checked){
         topTextEdit.disabled = true;
         topText.classList.add("displayNone");
@@ -175,7 +175,7 @@ topTextCheckbox.addEventListener("input", () =>{
     }
 });
 
-bottomTextCheckbox.addEventListener("input", () =>{
+bottomTextCheckbox.addEventListener("change", () =>{
     if(bottomTextCheckbox.checked){
         bottomTextEdit.disabled = true;
         bottomText.classList.add("displayNone");
@@ -242,7 +242,7 @@ textColor.addEventListener("input",()=>{
 });
 
 // Fondo transparente
-transparentTextCheckbox.addEventListener("input", () =>{
+transparentTextCheckbox.addEventListener("change", () =>{
     if(transparentTextCheckbox.checked){
         topText.style.backgroundColor = `transparent`;
         bottomText.style.backgroundColor = `transparent`;
