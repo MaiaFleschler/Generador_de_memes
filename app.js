@@ -10,6 +10,7 @@ const imageEdit = document.querySelector(".imageEdit");
 const textEdit = document.querySelector(".textEdit");
 const container = document.querySelector(".container");
 const divImg = document.querySelector("#imgMeme");
+const inpFile = document.querySelector("#inpFile");
 const inputUrl = document.querySelector("#url");
 const backgroundColor = document.querySelector("#backgroundColor");
 const backgroundColorNumber = document.querySelector(".backgroundColorNumber");
@@ -102,6 +103,15 @@ inputUrl.addEventListener("input",()=>{
     const url = inputUrl.value;
     divImg.style.backgroundImage = `url(${url})`;
 });
+
+inpFile.addEventListener("change", function(){
+    const file = this.files[0];
+    const reader = new FileReader();
+    reader.addEventListener("load", function(){
+        divImg.style.backgroundImage = `url(${this.result})`;
+    })
+    reader.readAsDataURL(file); 
+})
 
 // Cambio color de fondo
 backgroundColor.addEventListener("input",()=>{
